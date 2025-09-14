@@ -79,11 +79,9 @@ It works on **smartphones and even basic phones** (via SMS/IVR), ensuring access
 ## 📷 Screenshots (Demo)  
 ￼<img width="1792" height="1029" alt="Screenshot 2025-09-14 at 8 23 57 AM" src="https://github.com/user-attachments/assets/96fcbb4b-f370-444d-8b4b-f2b880b2bed2" />
 
-￼<img width="1790" height="1033" alt="Screenshot 2025-09-14 at 8 24 16 AM" src="https://github.com/user-attachments/assets/3b6bd6a7-4c50-4b1a-acd7-da3c2bdbc34c" />
+<img width="1792" height="828" alt="Screenshot 2025-09-14 at 10 08 53 AM" src="https://github.com/user-attachments/assets/d2b18638-bc76-458d-b1eb-6fe07cc2dcd4" />
 
-<img width="1792" height="939" alt="Screenshot 2025-09-14 at 8 25 47 AM" src="https://github.com/user-attachments/assets/3e633cf0-bb6c-4c08-9208-29a3f550ac18" />
-
-<img width="1784" height="546" alt="Screenshot 2025-09-14 at 8 25 36 AM" src="https://github.com/user-attachments/assets/78de6b37-d516-4e75-ac16-061927586a02" />
+<img width="1792" height="549" alt="Screenshot 2025-09-14 at 10 09 31 AM" src="https://github.com/user-attachments/assets/110a8cad-cf09-4183-a1a8-74d5a4e5686c" />
 
 ￼
 ## 🏁 Getting Started  
