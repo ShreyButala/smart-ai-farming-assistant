@@ -14,105 +14,128 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-   :root {
-  --primary-orange: #FF7B00;   /* Bright saffron */
-  --secondary-green: #2E7D32;  /* Fresh green */
-  --accent-blue: #1976D2;      /* Modern blue accent */
-  --light-bg: #F5F2E7;         /* Warm earthy beige */
-  --border-color: #e0e0e0;
-}
+    :root {
+      --primary-orange: #FF7B00;   /* Bright saffron */
+      --secondary-green: #2E7D32;  /* Fresh green */
+      --accent-blue: #1976D2;      /* Modern blue accent */
+      --light-bg: #F5F2E7;         /* Warm earthy beige */
+      --border-color: #e0e0e0;
+    }
 
-body {
-  background-color: var(--light-bg);
-  font-family: 'Poppins', sans-serif;
-  color: #333;
-}
+    body {
+      background-color: var(--light-bg);
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+    }
+    
+    .hidden { display: none !important; }
 
-/* Navbar */
-.navbar {
-  background: linear-gradient(90deg, var(--primary-orange), var(--secondary-green));
-  border-bottom: none;
-}
-.navbar-brand span {
-  color: white !important;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
+    /* Navbar */
+    .navbar {
+      background: linear-gradient(90deg, var(--primary-orange), var(--secondary-green));
+      border-bottom: none;
+    }
+    .navbar-brand span {
+      color: white !important;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
 
-/* Header */
-.main-header {
-  background: linear-gradient(120deg, var(--primary-orange), var(--secondary-green));
-  color: white;
-  border-radius: 0 0 1.5rem 1.5rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-.main-header h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-}
-.main-header p {
-  font-size: 1.1rem;
-  font-weight: 400;
-}
+    /* Header */
+    .main-header {
+      background: linear-gradient(120deg, var(--primary-orange), var(--secondary-green));
+      color: white;
+      border-radius: 0 0 1.5rem 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .main-header h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+    }
+    .main-header p {
+      font-size: 1.1rem;
+      font-weight: 400;
+    }
 
-/* Cards */
-.card {
-  border-radius: 1rem;
-  border: none;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
-}
-.card-header {
-  background: var(--accent-blue);
-  color: white;
-  font-weight: 600;
-  border-radius: 1rem 1rem 0 0;
-}
+    /* Cards */
+    .card {
+      border-radius: 1rem;
+      border: none;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    }
+    .card-header {
+      background: var(--accent-blue);
+      color: white;
+      font-weight: 600;
+      border-radius: 1rem 1rem 0 0;
+    }
 
-/* Buttons */
-.btn-primary {
-  background-color: var(--primary-orange);
-  border: none;
-  border-radius: 50px;
-  font-size: 1rem;
-  padding: 0.6rem 1.4rem;
-}
-.btn-primary:hover {
-  background-color: #e66b00;
-}
+    /* Buttons */
+    .btn-primary {
+      background-color: var(--primary-orange);
+      border: none;
+      border-radius: 50px;
+      font-size: 1rem;
+      padding: 0.6rem 1.4rem;
+    }
+    .btn-primary:hover {
+      background-color: #e66b00;
+    }
+    .btn-primary:disabled {
+        background-color: #ff9a3f;
+    }
 
-.btn-secondary {
-  background-color: var(--secondary-green);
-  border: none;
-  border-radius: 50px;
-  font-size: 1rem;
-}
-.btn-secondary:hover {
-  background-color: #256628;
-}
+    .btn-secondary {
+      background-color: var(--secondary-green);
+      border: none;
+      border-radius: 50px;
+      font-size: 1rem;
+    }
+    .btn-secondary:hover {
+      background-color: #256628;
+    }
 
-.btn-info {
-  background-color: var(--accent-blue);
-  color: white !important;
-  border-radius: 50px;
-}
-.btn-info:hover {
-  background-color: #1565c0;
-}
+    .btn-info {
+      background-color: var(--accent-blue);
+      color: white !important;
+      border-radius: 50px;
+    }
+    .btn-info:hover {
+      background-color: #1565c0;
+    }
 
-/* Chatbot & history cards */
-#chatWindow {
-  background: #ffffff;
-  border-radius: 0.8rem;
-  border: 1px solid #ddd;
-}
+    /* Chatbot & history cards */
+    #chatWindow {
+      background: #ffffff;
+      border-radius: 0.8rem;
+      border: 1px solid #ddd;
+    }
 
-/* Footer */
-footer {
-  background: linear-gradient(90deg, var(--secondary-green), var(--primary-orange));
-  color: white;
-  border-radius: 1.5rem 1.5rem 0 0;
-  font-weight: 500;
-}
+    /* Forecast Styling */
+    .forecast-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 1rem;
+    }
+    .forecast-day {
+        background-color: #f8f9fa;
+        border: 1px solid #e9ecef;
+        border-radius: 0.75rem;
+        padding: 1rem;
+        text-align: center;
+    }
+    .forecast-day .weather-icon {
+        font-size: 2.5rem;
+        color: var(--accent-blue);
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(90deg, var(--secondary-green), var(--primary-orange));
+      color: white;
+      border-radius: 1.5rem 1.5rem 0 0;
+      font-weight: 500;
+    }
 
   </style>
 </head>
@@ -181,13 +204,9 @@ footer {
                 </select>
               </div>
               <div class="col-12">
-                <label for="location" class="form-label">Location / स्थान <span class="text-muted fw-normal"></span></label>
-                <input id="location" class="form-control" placeholder="e.g., Ahmedabad or 23.03,72.58">
+                <label for="location" class="form-label">Location / स्थान <span class="text-muted fw-normal">(City or District)</span></label>
+                <input id="location" class="form-control" placeholder="e.g., Ahmedabad or Nashik">
               </div>
-               <div class="col-12">
-                <label for="owmKey" class="form-label">OpenWeatherMap API Key <span class="text-muted fw-normal">(Optional for live weather)</span></label>
-                <input id="owmKey" class="form-control" placeholder="Paste API key here for live forecast">
-               </div>
             </div>
             <div class="d-flex gap-2 mt-4">
               <button class="btn btn-primary btn-lg flex-grow-1" id="recommendBtn"><i class="bi bi-lightbulb-fill me-2"></i>Get Crop Recommendation</button>
@@ -208,6 +227,17 @@ footer {
                     <button class="btn btn-dark" id="saveBtn"><i class="bi bi-cloud-arrow-down-fill me-2"></i>Save to History</button>
                     <button class="btn btn-info text-dark" id="smsBtn"><i class="bi bi-phone-fill me-2"></i>Create SMS</button>
                     <button class="btn btn-secondary text-white ms-auto" id="chatBtn"><i class="bi bi-chat-dots-fill me-2"></i>Open Farmer Chatbot</button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="card techtide-card mb-4">
+             <div class="card-header">
+                <h5 class="mb-0"><i class="bi bi-calendar-week-fill me-2"></i>3. 7-Day Weather Forecast</h5>
+            </div>
+            <div class="card-body p-4">
+                <div id="forecastContainer">
+                    <p class="text-muted">Enter a location to see the 7-day forecast.</p>
                 </div>
             </div>
         </section>
@@ -245,8 +275,8 @@ footer {
 
   <script>
     /* =====================
-        Utilities & i18n
-        ===================== */
+       Utilities & i18n
+       ===================== */
     const i18n = {
       en: { saved_msg: 'Saved to history!', defaultGreeting: 'Hello! Ask about crops, water, or schemes.' },
       hi: { saved_msg: 'इतिहास में सहेजा गया!', defaultGreeting: 'नमस्ते! फसल, पानी, या योजनाओं के बारे में पूछें।' },
@@ -286,15 +316,13 @@ footer {
         return `\n\n${l.title}\n--------------------\n${l.desc}\n\n**${l.benefits_title}**\n${l.benefits}\n\n**${l.eligibility_title}**\n${l.eligibility}`;
     }
 
-    function windDegToDir(deg) { const dirs = ["N","NNE","NE","ENE","E","ESE","SE","SSE","S","SSW","SW","WSW","W","WNW","NW","NNW"]; return dirs[Math.round(deg / 22.5) % 16]; }
-    function getSunlightHours(sunrise, sunset){ const duration = (sunset - sunrise) / 3600; return `${Math.floor(duration)}h ${Math.round((duration % 1) * 60)}m`; }
     function t(lang,key){ return (i18n[lang] && i18n[lang][key]) || i18n['en'][key] || key; }
 
     /* =====================
-        DOM + App logic
-        ===================== */
+       DOM + App logic
+       ===================== */
     const allDOMElements = {
-        pageInput: document.getElementById('page-input'), pageResults: document.getElementById('page-results'), backBtn: document.getElementById('backBtn'), langEl: document.getElementById('lang'), soilEl: document.getElementById('soil'), phEl: document.getElementById('ph'), phVal: document.getElementById('phVal'), rainEl: document.getElementById('rainPref'), locationEl: document.getElementById('location'), owmKeyEl: document.getElementById('owmKey'), recBtn: document.getElementById('recommendBtn'), recOutput: document.getElementById('recOutput'), saveBtn: document.getElementById('saveBtn'), smsBtn: document.getElementById('smsBtn'), chatBtn: document.getElementById('chatBtn'), chatCard: document.getElementById('chatCard'), chatWindow: document.getElementById('chatWindow'), chatInput: document.getElementById('chatInput'), sendBtn: document.getElementById('sendBtn'), micBtn: document.getElementById('micBtn'), closeChat: document.getElementById('closeChat'), chatTitle: document.getElementById('chatTitle'), offlineList: document.getElementById('offlineList'), clearSaved: document.getElementById('clearSaved')
+        pageInput: document.getElementById('page-input'), pageResults: document.getElementById('page-results'), backBtn: document.getElementById('backBtn'), langEl: document.getElementById('lang'), soilEl: document.getElementById('soil'), phEl: document.getElementById('ph'), phVal: document.getElementById('phVal'), rainEl: document.getElementById('rainPref'), locationEl: document.getElementById('location'), recBtn: document.getElementById('recommendBtn'), recOutput: document.getElementById('recOutput'), saveBtn: document.getElementById('saveBtn'), smsBtn: document.getElementById('smsBtn'), chatBtn: document.getElementById('chatBtn'), chatCard: document.getElementById('chatCard'), chatWindow: document.getElementById('chatWindow'), chatInput: document.getElementById('chatInput'), sendBtn: document.getElementById('sendBtn'), micBtn: document.getElementById('micBtn'), closeChat: document.getElementById('closeChat'), chatTitle: document.getElementById('chatTitle'), offlineList: document.getElementById('offlineList'), clearSaved: document.getElementById('clearSaved'), forecastContainer: document.getElementById('forecastContainer')
     };
     
     let currentLang = allDOMElements.langEl.value, useVoice = true;
@@ -314,7 +342,6 @@ footer {
       if(!useVoice || !('speechSynthesis' in window)) return;
       const utter = new SpeechSynthesisUtterance(text);
       const targetLang = currentLang === 'hi' ? 'hi-IN' : (currentLang === 'gu' ? 'gu-IN' : 'en-GB');
-      // Find a specific voice for the language, which improves quality
       const voice = availableVoices.find(v => v.lang === targetLang);
       if (voice) utter.voice = voice;
       utter.lang = targetLang;
@@ -350,30 +377,95 @@ footer {
       if(q.includes('scheme')||q.includes('योजना')||q.includes('યોજના')){ return {en: 'PM-KISAN gives ₹6,000/year to small farmers. Check your eligibility at the nearest CSC.', hi: 'पीएम-किसान छोटे किसानों को ₹6,000/वर्ष देती है। नजदीकी सीएससी पर अपनी पात्रता जांचें।', gu: 'પીએમ-કિસાન નાના ખેડૂતોને વાર્ષિક ₹6,000 આપે છે. નજીકના CSC પર તમારી યોગ્યતા તપાસો.'}[currentLang]; }
       return {en: 'Sorry, I did not understand.', hi: 'माफ़ कीजिए, मैं समझ नहीं पाया।', gu: 'માફ કરશો, હું સમજી શક્યો નહીં.'}[currentLang];
     }
+    
+    // --- NEW: Open-Meteo Weather Logic ---
+    function getWeatherIconAndDescription(code) {
+        const wmo = {
+            0: { desc: 'Clear sky', icon: 'bi-sun-fill' }, 1: { desc: 'Mainly clear', icon: 'bi-cloud-sun-fill' }, 2: { desc: 'Partly cloudy', icon: 'bi-cloud-sun-fill' }, 3: { desc: 'Overcast', icon: 'bi-cloud-fill' }, 45: { desc: 'Fog', icon: 'bi-cloud-fog2-fill' }, 48: { desc: 'Depositing rime fog', icon: 'bi-cloud-fog2-fill' }, 51: { desc: 'Light drizzle', icon: 'bi-cloud-drizzle-fill' }, 53: { desc: 'Moderate drizzle', icon: 'bi-cloud-drizzle-fill' }, 55: { desc: 'Dense drizzle', icon: 'bi-cloud-drizzle-fill' }, 56: { desc: 'Light freezing drizzle', icon: 'bi-cloud-drizzle-fill' }, 57: { desc: 'Dense freezing drizzle', icon: 'bi-cloud-drizzle-fill' }, 61: { desc: 'Slight rain', icon: 'bi-cloud-rain-fill' }, 63: { desc: 'Moderate rain', icon: 'bi-cloud-rain-heavy-fill' }, 65: { desc: 'Heavy rain', icon: 'bi-cloud-rain-heavy-fill' }, 66: { desc: 'Light freezing rain', icon: 'bi-cloud-rain-fill' }, 67: { desc: 'Heavy freezing rain', icon: 'bi-cloud-rain-heavy-fill' }, 71: { desc: 'Slight snow fall', icon: 'bi-cloud-snow-fill' }, 73: { desc: 'Moderate snow fall', icon: 'bi-cloud-snow-fill' }, 75: { desc: 'Heavy snow fall', icon: 'bi-cloud-snow-fill' }, 77: { desc: 'Snow grains', icon: 'bi-snow' }, 80: { desc: 'Slight rain showers', icon: 'bi-cloud-rain-fill' }, 81: { desc: 'Moderate rain showers', icon: 'bi-cloud-rain-heavy-fill' }, 82: { desc: 'Violent rain showers', icon: 'bi-cloud-rain-heavy-fill' }, 85: { desc: 'Slight snow showers', icon: 'bi-cloud-snow-fill' }, 86: { desc: 'Heavy snow showers', icon: 'bi-cloud-snow-fill' }, 95: { desc: 'Thunderstorm', icon: 'bi-cloud-lightning-rain-fill' }, 96: { desc: 'Thunderstorm with slight hail', icon: 'bi-cloud-lightning-rain-fill' }, 99: { desc: 'Thunderstorm with heavy hail', icon: 'bi-cloud-lightning-rain-fill' }
+        };
+        return wmo[code] || { desc: 'N/A', icon: 'bi-question-circle-fill' };
+    }
 
+    async function getForecast(location) {
+        try {
+            // 1. Geocode location name to lat/lon
+            const geoRes = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(location)}&count=1&language=en&format=json`);
+            if (!geoRes.ok) throw new Error('Geocoding failed');
+            const geoData = await geoRes.json();
+            if (!geoData.results || geoData.results.length === 0) throw new Error('Location not found');
+            const { latitude, longitude, name } = geoData.results[0];
+
+            // 2. Fetch 7-day forecast
+            const forecastUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=weathercode,temperature_2m_max,temperature_2m_min,precipitation_sum,windspeed_10m_max&timezone=auto&forecast_days=7`;
+            const forecastRes = await fetch(forecastUrl);
+            if (!forecastRes.ok) throw new Error('Forecast fetch failed');
+            const forecastData = await forecastRes.json();
+            
+            return { name, forecast: forecastData };
+
+        } catch (error) {
+            console.error("Weather fetch error:", error);
+            return { error: error.message };
+        }
+    }
+
+    function displayForecast(data) {
+        const { forecastContainer } = allDOMElements;
+        if (data.error) {
+            forecastContainer.innerHTML = `<p class="text-danger">Could not load weather: ${data.error}</p>`;
+            return null;
+        }
+
+        const { daily } = data.forecast;
+        let forecastHTML = '<div class="forecast-grid">';
+
+        daily.time.forEach((day, index) => {
+            const { icon, desc } = getWeatherIconAndDescription(daily.weathercode[index]);
+            const date = new Date(day);
+            const displayDate = date.toLocaleDateString(currentLang === 'hi' ? 'hi-IN' : 'en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+            
+            forecastHTML += `
+                <div class="forecast-day">
+                    <h6 class="fw-bold">${displayDate}</h6>
+                    <p class="mb-2"><i class="bi ${icon} weather-icon"></i></p>
+                    <p class="mb-1" title="${desc}"><small>${desc}</small></p>
+                    <p class="mb-0 fw-bold"><i class="bi bi-thermometer-half"></i> ${daily.temperature_2m_max[index]}° / ${daily.temperature_2m_min[index]}°</p>
+                    <p class="mb-0"><i class="bi bi-cloud-drizzle"></i> ${daily.precipitation_sum[index]}mm</p>
+                    <p class="mb-0"><i class="bi bi-wind"></i> ${daily.windspeed_10m_max[index]}km/h</p>
+                </div>
+            `;
+        });
+        forecastHTML += '</div>';
+        forecastContainer.innerHTML = forecastHTML;
+
+        // Return first day's max temp for crop recommendation
+        return daily.temperature_2m_max[0];
+    }
+    
+    // --- Main Button Click ---
     allDOMElements.recBtn.addEventListener('click',async ()=>{
-      allDOMElements.recBtn.textContent = 'Calculating...';
-      const { soilEl, phEl, rainEl, locationEl, owmKeyEl } = allDOMElements;
-      const soil = soilEl.value, ph = parseFloat(phEl.value), rainPref = rainEl.value, loc = locationEl.value.trim(), apiKey = owmKeyEl.value.trim();
+      allDOMElements.recBtn.disabled = true;
+      allDOMElements.recBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Calculating...';
+      allDOMElements.forecastContainer.innerHTML = '<p class="text-muted">Fetching weather forecast...</p>';
 
-      let weather = {tempAvg: 28, rainProb: 0.3, windSpeed: 3, windDir: 'SW', sunlight: '11h 30m' };
-      if(apiKey && loc){
-        try{
-          let url = loc.includes(',') ? `https://api.openweathermap.org/data/2.5/weather?lat=${loc.split(',')[0].trim()}&lon=${loc.split(',')[1].trim()}&units=metric&appid=${apiKey}` : `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(loc)}&units=metric&appid=${apiKey}`;
-          const res = await fetch(url);
-          if(!res.ok) throw new Error('Weather fetch failed');
-          const j = await res.json();
-          weather = {tempAvg: j.main.temp, rainProb: j.rain ? 0.8 : 0.2, windSpeed: j.wind.speed, windDir: windDegToDir(j.wind.deg), sunlight: getSunlightHours(j.sys.sunrise, j.sys.sunset) };
-        } catch(e){ console.warn('OWM failed, using defaults',e); }
-      }
+      const { soilEl, phEl, rainEl, locationEl } = allDOMElements;
+      const soil = soilEl.value, ph = parseFloat(phEl.value), rainPref = rainEl.value, loc = locationEl.value.trim();
 
-      const tempCategory = weather.tempAvg > 27 ? 'hot' : (weather.tempAvg < 20 ? 'cool' : 'mild');
-      const crops = recommendCrops({soil,ph,rainCategory:rainPref,tempCategory});
+      // Get weather and display it
+      const weatherData = await getForecast(loc);
+      const todayTemp = displayForecast(weatherData);
+
+      // Determine temp category for crop recommendation
+      const tempCategory = todayTemp > 27 ? 'hot' : (todayTemp < 20 ? 'cool' : 'mild');
+      const crops = recommendCrops({soil, ph, rainCategory: rainPref, tempCategory});
+      
+      const bestCrop = crops[0];
+      const otherCrops = crops.slice(1).join(', ');
 
       const messages = {
-          en: `--- Weather & Soil Report ---\nLocation: ${loc || 'N/A'}\nSoil: ${soil} (pH ${ph})\n\n--- Forecast ---\n🌡️ Est. Temp: ${weather.tempAvg.toFixed(1)}°C\n☀️ Sunlight: ${weather.sunlight}\n💨 Wind: ${weather.windSpeed.toFixed(1)} m/s (${weather.windDir})\n\n--- Recommendations ---\nTop Crop Suggestions: ${crops.join(', ')}`,
-          hi: `--- मौसम और मिट्टी की रिपोर्ट ---\nस्थान: ${loc || 'N/A'}\nमिट्टी: ${soil} (pH ${ph})\n\n--- पूर्वानुमान ---\n🌡️ अनुमानित तापमान: ${weather.tempAvg.toFixed(1)}°C\n☀️ धूप: ${weather.sunlight}\n💨 हवा: ${weather.windSpeed.toFixed(1)} m/s (${weather.windDir})\n\n--- सिफारिशें ---\nशीर्ष फसल सुझाव: ${crops.join(', ')}`,
-          gu: `--- હવામાન અને જમીનનો અહેવાલ ---\nસ્થાન: ${loc || 'N/A'}\nજમીન: ${soil} (pH ${ph})\n\n--- આગાહી ---\n🌡️ અંદાજિત તાપમાન: ${weather.tempAvg.toFixed(1)}°C\n☀️ સૂર્યપ્રકાશ: ${weather.sunlight}\n💨 પવન: ${weather.windSpeed.toFixed(1)} m/s (${weather.windDir})\n\n--- ભલામણો ---\nટોચના પાક સૂચનો: ${crops.join(', ')}`
+          en: `--- Soil Report ---\nLocation: ${weatherData.name || loc || 'N/A'}\nSoil Type: ${soil} (pH ${ph})\n\n--- Crop Recommendations ---\n\n**🌱 Best Suitable Crop: ${bestCrop}**\nThis is the top choice as it's exceptionally suited to your soil, rainfall pattern, and the warm weather forecast.\n\n**Other Good Options:**\n${otherCrops}`,
+          hi: `--- मिट्टी रिपोर्ट ---\nस्थान: ${weatherData.name || loc || 'N/A'}\nमिट्टी का प्रकार: ${soil} (pH ${ph})\n\n--- फसल सिफारिशें ---\n\n**🌱 सर्वश्रेष्ठ उपयुक्त फसल: ${bestCrop}**\nयह शीर्ष विकल्प है क्योंकि यह आपकी मिट्टी, वर्षा पैटर्न और गर्म मौसम के पूर्वानुमान के लिए असाधारण रूप से उपयुक्त है।\n\n**अन्य अच्छे विकल्प:**\n${otherCrops}`,
+          gu: `--- જમીન અહેવાલ ---\nસ્થાન: ${weatherData.name || loc || 'N/A'}\nજમીનનો પ્રકાર: ${soil} (pH ${ph})\n\n--- પાકની ભલામણો ---\n\n**🌱 શ્રેષ્ઠ યોગ્ય પાક: ${bestCrop}**\nઆ શ્રેષ્ઠ વિકલ્પ છે કારણ કે તે તમારી જમીન, વરસાદની પેટર્ન અને ગરમ હવામાનની આગાહી માટે અસાધારણ રીતે અનુકૂળ છે.\n\n**અન્ય સારા વિકલ્પો:**\n${otherCrops}`
       };
       
       let message = messages[currentLang] || messages['en'];
@@ -382,12 +474,14 @@ footer {
 
       allDOMElements.recOutput.textContent = message;
       speak(message.substring(0, 300));
-      window._lastRecommendation = {when:new Date().toISOString(),loc,soil,ph,weather,crops,message};
-      allDOMElements.recBtn.textContent = 'Get Crop Recommendation';
+      window._lastRecommendation = {when:new Date().toISOString(),loc,soil,ph,weather:weatherData,crops,message};
+      
+      allDOMElements.recBtn.disabled = false;
+      allDOMElements.recBtn.innerHTML = '<i class="bi bi-lightbulb-fill me-2"></i>Get Crop Recommendation';
       switchPage('results');
     });
 
-    // --- History / Offline Logic (MODIFIED) ---
+    // --- History / Offline Logic ---
     const historyKey = 'smartfarm_history';
     function getHistory() { return JSON.parse(localStorage.getItem(historyKey)) || []; }
     function saveHistory(history) { localStorage.setItem(historyKey, JSON.stringify(history)); }
@@ -395,8 +489,8 @@ footer {
     allDOMElements.saveBtn.addEventListener('click',()=>{
       if(window._lastRecommendation){
         const history = getHistory();
-        history.unshift(window._lastRecommendation); // Add to beginning of array
-        saveHistory(history.slice(0, 10)); // Keep max 10 records
+        history.unshift(window._lastRecommendation); 
+        saveHistory(history.slice(0, 10)); 
         alert(t(currentLang,'saved_msg'));
         refreshOfflineList();
       } else alert('No recommendation to save.');
@@ -426,6 +520,7 @@ footer {
             const item = history[index];
             if (item) {
                 allDOMElements.recOutput.textContent = item.message;
+                displayForecast(item.weather); // Also load the forecast
                 speak(item.message.substring(0, 300));
                 window._lastRecommendation = item;
             }
